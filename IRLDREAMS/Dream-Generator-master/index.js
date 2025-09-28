@@ -4,14 +4,15 @@ const path = require("path");
 const OpenAi = require("openai");
 
 const OPENAI_API_KEY =
-  "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";
+  ;
+// Replace with your OPENAI API KEY
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Replace with your OpenAI API key
 const ELEVENLABS_API_KEY =
-  "sk_26a071e5ea095d24e4fba17b7977be40088b4b4219b55600"; // Replace with your ElevenLabs API key
+  ; // Replace with your ElevenLabs API key
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json()); // To parse JSON bodies
@@ -151,3 +152,4 @@ app.get("/generate-images", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+

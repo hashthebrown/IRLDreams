@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRLDreams</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/css/lightgallery-bundle.min.css"
+      integrity="sha512-fXavT4uA4L0uTUFHC275D7zd751ohbSuD6VUMc5JysWfmR+NxTI3w7etE7N9hjTETcoh0w0V+24Cel4xXnqvCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+        display: none;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #message1 {
+        opacity: 0;
+        transition: 2s ease-in-out all;
+      }
+      #message2 {
+        opacity: 0;
+        transition: 2s ease-in-out all;
+      }
+
+      #message3 {
+        opacity: 0;
+        transition: 2s ease-in-out all;
+      }
+      .message {
+        transform: translate(-50%, -50%);
+        line-height: 1.35 !important;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex justify-center items-center relative">
+      <div
+        style="background-image: url('./images/moon.png')"
+        class="bg-cover bg-center fixed min-h-screen w-full"
+      ></div>
+      <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+      <div class="text-center text-white w-8/12 mx-auto">
+        <!-- Message 1 -->
+        <h1
+          id="message1"
+          class="text-5xl px-6 font-semibold message absolute w-full message"
+        >
+          Hello and welcome to IRLDreams
+        </h1>
+        <p
+          id="message2"
+          class="text-5xl px-6 font-semibold message absolute w-full message"
+        >
+          Would you like your dream come to life?
+        </p>
+
+        <div id="message3" class="message absolute w-full">
+          <p
+            style="line-height: 1.35"
+            class="text-5xl px-6 font-semibold mb-10"
+          >
+            Describe one of your dreams in detail <br />
+            and we will make it come to life.
+          </p>
+          <input
+            id="image-prompt"
+            type="text"
+            placeholder="Enter Your Dream Description..."
+            class="w-7/12 py-4 px-6 text-white text-2xl font-semibold rounded-xl"
+          />
+
+          <button
+            id="generate-btn"
+            class="h-[75px] px-10 text-white text-xl rounded-xl ml-3 font-semibold"
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h1
+      id="lightGallery"
+      class="text-5xl text-white text-center relative font-semibold"
+    >
+      Dream Gallery
+    </h1>
+
+    <div
+      id="lightgallery"
+      class="relative w-10/12 mx-auto py-10 gap-5 grid xl:grid-cols-3 grid-cols-2"
+    >
+      <a
+        href="https://plus.unsplash.com/premium_photo-1675826393511-7ce378893229?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img1"
+          src="https://plus.unsplash.com/premium_photo-1675826393511-7ce378893229?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+      <a
+        href="https://plus.unsplash.com/premium_photo-1707563216156-e33bf94d36c8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img2"
+          src="https://plus.unsplash.com/premium_photo-1707563216156-e33bf94d36c8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+      <a
+        href="https://images.unsplash.com/photo-1513436539083-9d2127e742f1?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img1"
+          src="https://images.unsplash.com/photo-1513436539083-9d2127e742f1?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+      <a
+        href="https://images.unsplash.com/photo-1544200502-6652e105f865?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img2"
+          src="https://images.unsplash.com/photo-1544200502-6652e105f865?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+      <a
+        href="https://images.unsplash.com/photo-1509906074166-d50a7c450c52?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img2"
+          src="https://images.unsplash.com/photo-1509906074166-d50a7c450c52?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+      <a
+        href="https://images.unsplash.com/photo-1531417598437-54922736bd4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      >
+        <img
+          alt="img2"
+          src="https://images.unsplash.com/photo-1531417598437-54922736bd4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </a>
+    </div>
+
+    <audio class="hidden" id="audioPlayer" controls loop></audio>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="lightGallery/lightgallery.umd.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.umd.min.js"
+      integrity="sha512-UexFzU0TQTsof5otQ8fWrqPtNY1ctVv3ZphalsV++TwPEIDXnEprY2Q11GLi4BVM+k0nFPy3CdMYrxR8bDfl4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      const msg1 = document.querySelector("#message1");
+      const msg2 = document.querySelector("#message2");
+      const msg3 = document.querySelector("#message3");
+
+      setTimeout(() => {
+        document.body.style.display = "block";
+      }, 1000);
+
+      setTimeout(() => {
+        msg1.style.opacity = "1";
+      }, 1500);
+
+      setTimeout(() => {
+        msg1.style.opacity = "0";
+      }, 3500);
+
+      setTimeout(() => {
+        msg2.style.opacity = "1";
+      }, 5500);
+
+      setTimeout(() => {
+        msg2.style.opacity = "0";
+      }, 7500);
+
+      setTimeout(() => {
+        msg3.style.opacity = "1";
+      }, 9500);
+
+      lightGallery(document.getElementById("lightgallery"), {
+        plugins: [],
+        licenseKey: "your_license_key",
+        speed: 500,
+        // ... other settings
+      });
+    </script>
+  </body>
+</html>
